@@ -1,10 +1,19 @@
 import random #載入模組(Module)"random"
 
-r = random.randint(1, 100) #利用函式"randint"產生隨機整數 Rang:1~100
+start = input('決定隨機數字範圍的開始值')
+end = input('決定隨機數字範圍的結束值')
+
+#Casting
+start = int(start) 
+end = int(end)
+
+r = random.randint(start, end) #利用函式"randint"產生隨機整數 Rang:1~100
 count = 0
 while True:
 	count +=1
-	n = input('輸入數字(0-100): ')
+	print('範圍: ',start, '-', end )
+	n = input('請猜數字:')
+
 	n = int(n) #Casting
 	if n == r:
 		print('猜對了')
